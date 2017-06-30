@@ -1,0 +1,10 @@
+node_modules/*
+addons/*
+src/*
+.bowerrc
+bower.json
+gulpfile.js
+gutil.log
+package.json
+package-lock.json
+yarn.lock
