@@ -85,50 +85,39 @@
 </div>
 
 <main id="main" class="row">
-    <div class="twelve columns">
+    <div class="twelve ">
 
-        <div id="treatment-slides">
-            <ul class="slides-container">
-                <li>
-                    <img src="img/demo/home1.jpg" alt="" />
-                    <div class="row">
-                        <div class="slide-content five columns">
-                            <h1>Eye Treatments</h1>
-                            <a class="btn" href="https://www.facebook.com/SDNOUVEAULASHES/">Reviews in Facebook</a>
-                        </div>
-                    </div>
-                </li>
+        <ul id="treatment-slides">
+            <li>
+                <img src="img/282.jpg" alt="" />
+            </li>
 
-                <li>
-                    <img src="img/demo/home2.jpg" alt="" />
-                    <div class="row">
-                        <div class="slide-content five columns">
-                            <h1>Nail treatments</h1>
-                            <a class="btn" href="https://www.facebook.com/SDNOUVEAULASHES/">Reviews in Facebook</a>
-                        </div>
-                    </div>
-                </li>
+            <li>
+                <img src="img/285.jpg" alt="" />
+            </li>
 
-                <li>
-                    <img src="img/demo/home3.jpg" alt="" />
-                    <div class="row">
-                        <div class="slide-content five columns">
-                            <h1>Make up or break up</h1>
-                            <a class="btn" href="https://www.facebook.com/SDNOUVEAULASHES/">Reviews in Facebook</a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            <li>
+                <img src="img/40.jpg" alt="" />
+            </li>
 
-            <nav class="slides-navigation">
-                <a href="#" class="next">
-                    <i class="icon-chevron-right"></i>
-                </a>
-                <a href="#" class="prev">
-                    <i class="icon-chevron-left"></i>
-                </a>
-            </nav>
-        </div>
+            <li>
+                <img src="img/slogan.jpg" alt="" />
+            </li>
+
+            <li>
+                <img src="img/194.jpg" alt="" />
+            </li>
+
+            <li>
+                <img src="img/215.jpg" alt="" />
+            </li>
+
+            <li>
+                <img src="img/286.jpg" alt="" />
+            </li>
+        </ul>
+
+
     </div>
     <div class="twelve columns">
 
@@ -242,4 +231,41 @@
 </body>
 
 </html>
-<script src='js/vendors/jquery.superslides.min.js'></script>
+<script src="js/vendors/slick.min.js"></script>
+<script>
+    $('#treatment-slides').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        centerMode: true,
+
+        lazyLoad: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true
+            }
+        }, {
+            breakpoint: 800,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
+    });
+
+    // On swipe event
+    $('#treatment-slides').on('swipe', function(event, slick) {
+        $(this).slick('slickPause');
+    });
+</script>
