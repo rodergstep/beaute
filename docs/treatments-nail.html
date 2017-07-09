@@ -85,6 +85,35 @@
 </div>
 
 <main id="main" class="row">
+    <div class="twelve ">
+
+        <ul id="treatment-slides">
+            <li>
+                <img src="img/demo/service1.jpg" alt="" />
+            </li>
+            <li>
+                <img src="img/demo/service2.jpg" alt="" />
+
+            </li>
+            <li>
+                <img src="img/demo/222.jpg" alt="" />
+            </li>
+            <li>
+                <img src="img/demo/service4.jpg" alt="" />
+            </li>
+            <li>
+                <img src="img/demo/powder.jpg" alt="" />
+            </li>
+            <li>
+                <img src="img/demo/service5.jpg" alt="" />
+            </li>
+
+
+        </ul>
+
+
+    </div>
+
     <div class="twelve columns">
         <article class="entry service">
             <div class="wrap">
@@ -227,3 +256,41 @@
 </body>
 
 </html>
+<script src="js/vendors/slick.min.js"></script>
+<script>
+    $('#treatment-slides').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        centerMode: true,
+
+        lazyLoad: true,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true
+            }
+        }, {
+            breakpoint: 800,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
+    });
+
+    // On swipe event
+    $('#treatment-slides').on('swipe', function(event, slick) {
+        $(this).slick('slickPause');
+    });
+</script>
