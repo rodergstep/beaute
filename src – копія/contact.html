@@ -1,0 +1,167 @@
+@@include('../src/_head.html')
+
+<div id="title" class="row">
+    <div class="twelve columns">
+        <h1>Contact</h1>
+    </div>
+</div>
+
+<main id="main" class="row">
+
+
+    <div class="twelve columns">
+        <aside class="widget widget_text group">
+            <div class="wrap">
+                <h3 class="widget-title">
+                    <a href="tel:447710189679">Tel: <span>+44 7710 189679</span></a>
+                </h3>
+                <h3 class="social-title">Social links:</h3>
+                <a class="social facebook" href="https://www.facebook.com/SDNOUVEAULASHES/"><i class="icon-facebook"></i></a>
+                <a class="social instagram" href="https://www.instagram.com/sd.lashes/"><i class="icon-instagram"></i></a>
+            </div>
+        </aside>
+        <!--<article class="entry">
+            <div class="wrap">
+                <h1>Feel free to contact us for an appointment!</h1>
+
+                <form class="contact" action="/" />
+                <p>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" />
+                </p>
+
+                <p>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" />
+                </p>
+
+                <p>
+                    <label for="subject">Desired date:</label>
+                    <input type="text" id="subject" />
+                </p>
+
+                <div class="service-select">
+                    <p>
+                        <label for="service_select">Service</label>
+                        <select name="service_select" id="service_select" class="">
+                            <option value="">Choose the treatment</option>
+                            <option value="333">Shop</option>
+                            <option value="53">Facials</option>
+                            <option value="37">Manicure &amp; Pedicure</option>
+                            <option value="35">Eye Treatments</option>
+                            <option value="34">Waxing</option>
+                            <option value="31">Massage</option>
+                            <option value="84">Body Therapies</option>
+                            <option value="209">Complimentary Therapies</option>
+                            <option value="211">Tanning</option>
+                            <option value="214">Ear Piercing</option>
+                            <option value="231">Womens Laser Hair Removal</option>
+                            <option value="233">Mens Laser Hair Removal</option>
+                            <option value="33">Electrolysis &amp; Milia Removal</option>
+                            <option value="216">Special Packages</option>
+                            <option value="235">Pick &amp; Mix</option>
+                        </select>
+                    </p>
+                </div>
+
+                <p>
+                    <label for="message">Message (e.g. special instructions, convenient timeframe, etc)</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </p>
+
+                <p><input type="submit" value="Send" class="btn" /></p>
+                </form>
+            </div>
+        </article>-->
+    </div>
+
+    <!--<div id="sidebar" class="four columns">
+
+        <aside class="widget widget_text group">
+            <div class="wrap">
+                <h3 class="widget-title">Opening Hours</h3>
+                <ul class="scheldue">
+                    <li class="scheldue__item">
+                        <span>Tuesday, Wednesday & Thursday</span>
+                        <span class="scheldue__dots"></span>
+                        <span>9am – 9pm</span>
+                    </li>
+                    <li class="scheldue__item">
+                        <span>Friday</span>
+                        <span class="scheldue__dots"></span>
+                        <span>9am – 6pm</span>
+                    </li>
+                    <li class="scheldue__item">
+                        <span>Saturday</span>
+                        <span class="scheldue__dots"></span>
+                        <span>9am – 4pm </span>
+                    </li>
+                    <li class="scheldue__item">
+                        <span>Sunday/Monday</span>
+                        <span class="scheldue__dots"></span>
+                        <span>Closed</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <aside class="widget widget_social group">
+            <div class="wrap">
+                <h3 class="widget-title">
+                    <a href="tel:447710189679">Tel: <span>+44 7710 189679</span></a>
+                </h3>
+                <a class="social facebook" href="https://www.facebook.com/SDNOUVEAULASHES/"><i class="icon-facebook"></i></a>
+                <a class="social instagram" href=""><i class="icon-instagram"></i></a>
+                <a class="social gplus" href=""><i class="icon-google-plus"></i></a>
+            </div>
+        </aside>
+    </div>-->
+
+    <!--Map-->
+    <div class="twelve columns map">
+        <div class="wrap">
+            <div id="map"></div>
+        </div>
+    </div>
+
+</main>
+
+
+@@include('../src/_foot.html')
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script>
+    /* -----------------------------------------
+                                                             Google Map Function
+                                                             ----------------------------------------- */
+
+    function initMap() {
+        'use strict';
+
+        var myLatlng = new google.maps.LatLng(52.9287, -1.4343);
+        var mapOptions = {
+            zoom: 13,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        var contentString = '<div id="content"><strong>SD Salon</strong> - Chaddesden, DE21 6WW Derby</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Hello'
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map, marker);
+        });
+    }
+    /* -----------------------------------------
+        Google Map Init
+        ----------------------------------------- */
+    initMap();
+</script>

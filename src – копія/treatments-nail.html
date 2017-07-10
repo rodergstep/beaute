@@ -1,0 +1,181 @@
+@@include('../src/_head.html')
+
+<div id="title" class="row">
+    <div class="twelve columns">
+        <h1>Nail Treatments</h1>
+    </div>
+</div>
+
+<main id="main" class="row">
+    <div class="twelve ">
+
+        <ul id="treatment-slides">
+            <li>
+                <img src="img/demo/service1.jpg" alt="" />
+            </li>
+            <li>
+                <img src="img/demo/service2.jpg" alt="" />
+
+            </li>
+            <li>
+                <img src="img/demo/222.jpg" alt="" />
+            </li>
+            <li>
+                <img src="img/demo/service4.jpg" alt="" />
+            </li>
+            <li>
+                <img src="img/demo/powder.jpg" alt="" />
+            </li>
+            <li>
+                <img src="img/demo/service5.jpg" alt="" />
+            </li>
+
+
+        </ul>
+
+
+    </div>
+
+    <div class="twelve columns">
+        <article class="entry service">
+            <div class="wrap">
+                <div class="row">
+                    <div class="six columns">
+                        <figure class="entry-thumb">
+                            <a href="">
+                                <img src='img/demo/powder.jpg' width='760' height='390' alt='Placeholder Image' />
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="six columns entry-content">
+                        <div class="entry-meta">
+                            <h1 class="entry-title"><a href="">Powder Polish</a></h1>
+                            <ul class="entry-details group">
+                                <li>Duration: <span>45-60min</span></li>
+                                <li>Cost: <span>$90/h</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="entry-excerpt">
+                            <p>Cuccio - Powder Polish Cuccio pro powder polish utilises new technology to produce a fantastic way of applying permanent colour to the nail and offers a great alternative to gel polish. The application utilises specially formulated,
+                                medical grade adhesive gel with state of the art brush on activator and very finely milled acrylic powders to create beautiful nails that last a minimum of 14 days. It is the perfect treatment for clients who have weak
+                                or damaged nails, oily nail beds, nail biters, or clients who simply need something a little stronger than gel. The results are fabulous, nails are strengthened and there are lots of colours and glitters to choose from.</p>
+                        </div>
+
+                        <a class="read-more btn" href="https://www.sdlashes.setmore.com/">Make an appointment</a>
+                    </div>
+                </div>
+
+                <span class="offer-badge"><b>Special offer</b></span>
+            </div>
+        </article>
+
+        <article class="entry service">
+            <div class="wrap">
+                <div class="row">
+                    <div class="six columns">
+                        <figure class="entry-thumb">
+                            <a href="">
+                                <img src='img/demo/GEL.jpg' width='760' height='390' alt='Placeholder Image' />
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="six columns entry-content">
+                        <div class="entry-meta">
+                            <h1 class="entry-title"><a href="">Gel Polish</a></h1>
+                            <ul class="entry-details group">
+                                <li>Duration: <span>45-60min</span></li>
+                                <li>Cost: <span>$90/h</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="entry-excerpt">
+                            <p>Cuccio Veneer - Gel nails Cuccio veneer is a gel polish that lasts a minimum of 2 weeks. After working on your cuticles and nail shape we apply polish that is cured under a lamp. Cuccio colours are triple pigmented meaning
+                                that they are flawless in appearance. The process does not damage the natural nail. </p>
+                        </div>
+
+                        <a class="read-more btn" href="https://www.sdlashes.setmore.com/">Make an appointment</a>
+                    </div>
+                </div>
+
+                <span class="offer-badge"><b>Special offer</b></span>
+            </div>
+        </article>
+
+        <article class="entry service">
+            <div class="wrap">
+                <div class="row">
+                    <div class="six columns">
+                        <figure class="entry-thumb">
+                            <a href="">
+                                <img src='img/demo/service5.jpg' width='760' height='390' alt='Placeholder Image' />
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="six columns entry-content">
+                        <div class="entry-meta">
+                            <h1 class="entry-title"><a href="">Manicure / Pedicure</a></h1>
+                            <ul class="entry-details group">
+                                <li>Duration: <span>45-60min</span></li>
+                                <li>Cost: <span>$90/h</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="entry-excerpt">
+                            <p>Manicure: Begins with a relaxing hand massage, cuticle treatment, nail shaping and a polish of your choice.</p>
+                            <p>Pedicure: Begins with a relaxing foot soak, followed by a foot scrub, nail clipping and shaping, a foot massage and finished with a Polish of your choice. </p>
+                        </div>
+
+                        <a class="read-more btn" href="https://www.sdlashes.setmore.com/">Make an appointment</a>
+                    </div>
+                </div>
+
+                <span class="offer-badge"><b>Special offer</b></span>
+            </div>
+        </article>
+
+    </div>
+</main>
+
+@@include('../src/_foot.html')
+<script src="js/vendors/slick.min.js"></script>
+<script>
+    $('#treatment-slides').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        centerMode: true,
+
+        lazyLoad: true,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true
+            }
+        }, {
+            breakpoint: 800,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
+    });
+
+    // On swipe event
+    $('#treatment-slides').on('swipe', function(event, slick) {
+        $(this).slick('slickPause');
+    });
+</script>
