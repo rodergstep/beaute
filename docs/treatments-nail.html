@@ -85,40 +85,6 @@
 </div>
 
 <main id="main" class="row">
-    <div class="twelve ">
-
-        <ul id="treatment-slides">
-            <li>
-                <img src="img/demo/vaucher.jpg" alt="" />
-            </li>
-            <li>
-                <img src="img/demo/service1.jpg" alt="" />
-            </li>
-            <li>
-                <img src="img/demo/coupon.jpg" alt="" />
-            </li>
-            <li>
-                <img src="img/demo/service2.jpg" alt="" />
-
-            </li>
-            <li>
-                <img src="img/demo/222.jpg" alt="" />
-            </li>
-            <li>
-                <img src="img/demo/service4.jpg" alt="" />
-            </li>
-            <li>
-                <img src="img/demo/powder.jpg" alt="" />
-            </li>
-            <li>
-                <img src="img/demo/service5.jpg" alt="" />
-            </li>
-
-
-        </ul>
-
-
-    </div>
 
     <div class="twelve columns">
         <article class="entry service">
@@ -137,7 +103,7 @@
                             <h1 class="entry-title"><a href="">Powder Polish</a></h1>
                             <ul class="entry-details group">
                                 <li>Duration: <span>45-60min</span></li>
-                                <li>Cost: <span>$90/h</span></li>
+                                <li>Cost: <span>£21/h</span></li>
                             </ul>
                         </div>
 
@@ -146,7 +112,6 @@
                                 medical grade adhesive gel with state of the art brush on activator and very finely milled acrylic powders to create beautiful nails that last a minimum of 14 days. It is the perfect treatment for clients who have weak
                                 or damaged nails, oily nail beds, nail biters, or clients who simply need something a little stronger than gel. The results are fabulous, nails are strengthened and there are lots of colours and glitters to choose from.</p>
                         </div>
-
                         <a class="read-more btn" href="https://www.sdlashes.setmore.com/">Make an appointment</a>
                     </div>
                 </div>
@@ -161,7 +126,7 @@
                     <div class="six columns">
                         <figure class="entry-thumb">
                             <a href="">
-                                <img src='img/demo/GEL.jpg' width='760' height='390' alt='Placeholder Image' />
+                                <img src='img/cuccio.jpg' width='760' height='390' alt='Placeholder Image' />
                             </a>
                         </figure>
                     </div>
@@ -171,7 +136,7 @@
                             <h1 class="entry-title"><a href="">Gel Polish</a></h1>
                             <ul class="entry-details group">
                                 <li>Duration: <span>45-60min</span></li>
-                                <li>Cost: <span>$90/h</span></li>
+                                <li>Cost: <span>£18/h</span></li>
                             </ul>
                         </div>
 
@@ -194,7 +159,7 @@
                     <div class="six columns">
                         <figure class="entry-thumb">
                             <a href="">
-                                <img src='img/demo/service5.jpg' width='760' height='390' alt='Placeholder Image' />
+                                <img src='img/cuccio.jpg' width='760' height='390' alt='Placeholder Image' />
                             </a>
                         </figure>
                     </div>
@@ -204,7 +169,7 @@
                             <h1 class="entry-title"><a href="">Manicure / Pedicure</a></h1>
                             <ul class="entry-details group">
                                 <li>Duration: <span>45-60min</span></li>
-                                <li>Cost: <span>$90/h</span></li>
+                                <li>Cost: <span>£90/h</span></li>
                             </ul>
                         </div>
 
@@ -220,6 +185,8 @@
                 <span class="offer-badge"><b>Special offer</b></span>
             </div>
         </article>
+
+
 
     </div>
 </main>
@@ -262,41 +229,3 @@
 </body>
 
 </html>
-<script src="js/vendors/slick.min.js"></script>
-<script>
-    $('#treatment-slides').slick({
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        centerMode: true,
-
-        lazyLoad: true,
-        autoplay: true,
-        autoplaySpeed: 6000,
-        responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: true
-            }
-        }, {
-            breakpoint: 800,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }]
-    });
-
-    // On swipe event
-    $('#treatment-slides').on('swipe', function(event, slick) {
-        $(this).slick('slickPause');
-    });
-</script>
